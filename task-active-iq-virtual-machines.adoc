@@ -1,0 +1,82 @@
+---
+permalink: task-active-iq-virtual-machines.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, virtual, machines, vm 
+summary: Scopri di più sulla pagina macchine virtuali in SolidFire Active IQ. 
+---
+= Macchine virtuali
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dalla pagina *macchine virtuali*, disponibile sul pannello laterale di un cluster NetApp HCI selezionato, è possibile visualizzare le informazioni sullo stato della CPU e dello storage relative alle macchine virtuali (VM).
+
+
+NOTE: La pagina *macchine virtuali* è disponibile solo su un cluster NetApp HCI.
+
+Scopri come filtrare e comprendere i dati delle macchine virtuali visualizzati nell'interfaccia utente.
+
+
+
+== Visualizza i dettagli della macchina virtuale
+
+La pagina *macchine virtuali*, disponibile nel pannello laterale di un cluster selezionato, fornisce informazioni su ciascuna macchina virtuale attiva associata al cluster.
+
+Oltre alle opzioni di filtraggio convenzionali disponibili in tutte le pagine SolidFire Active IQ, la pagina *macchine virtuali* dispone di pulsanti di filtro rapido che è possibile selezionare per determinare gli stati comuni di disponibilità delle macchine virtuali.
+
+La barra delle informazioni fornisce una rapida panoramica dei seguenti dati:
+
+* Macchine virtuali: Il numero e i vari stati di disponibilità delle macchine virtuali associate al cluster di storage.
+* Status (Stato): Il numero di avvisi o errori per le macchine virtuali.
+* Provisioning Resources (risorse fornite): Le risorse di storage e memoria totali per tutte le macchine virtuali associate al cluster di storage.
+
+
+[cols="30,70"]
+|===
+| Intestazione | Descrizione 
+
+
+| Nome | Il nome descrittivo della macchina virtuale. 
+
+
+| Stato  a| 
+Lo stato di disponibilità della macchina virtuale:
+
+* Normale: La macchina virtuale risponde come previsto.
+* Attenzione: È stato segnalato un avviso. Per ulteriori informazioni, consulta vSphere.
+* Critico: È stato segnalato un errore critico. Per ulteriori informazioni, consulta vSphere.
+* Sconosciuto: La macchina virtuale non è accessibile.
+
+
+
+
+| Power state (Stato alimentazione) | Indica se la macchina virtuale è accesa, spenta o sospesa. 
+
+
+| IP vCenter | Indirizzo IP del server vCenter. 
+
+
+| Numero di CPU | Il numero di CPU per ciascuna macchina virtuale. 
+
+
+| Utilizzo della memoria host | La quantità di memoria host ESXi utilizzata da una macchina virtuale. 
+
+
+| Utilizzo della CPU | La percentuale di CPU virtuale utilizzata attivamente come percentuale della CPU totale disponibile nella macchina virtuale. 
+
+
+| Capacità utilizzata | La percentuale di risorse di storage delle macchine virtuali in uso. 
+
+
+| Latenza massima del disco | La latenza massima del disco rilevata in millisecondi. 
+
+
+| Allarmi | Il numero di allarmi vSphere attivati sulla macchina virtuale. 
+|===
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

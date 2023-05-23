@@ -1,0 +1,118 @@
+---
+permalink: task-active-iq-snapshots-and-schedules.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, snapshot, details, schedule 
+summary: Scopri di più sulla visualizzazione dei dettagli delle istantanee e sulla pianificazione delle istantanee in SolidFire Active IQ. 
+---
+= Snapshot e Snapshot Schedules
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Scopri di più sulla visualizzazione di informazioni su snapshot e pianificazioni di snapshot:
+
+* <<Snapshot>>
+* <<Pianificazioni di Snapshot>>
+
+
+
+
+== Snapshot
+
+Dalla pagina *Volumes* (volumi) disponibile nel pannello laterale di un cluster selezionato, è possibile visualizzare informazioni sulle snapshot dei volumi.
+
+.Fasi
+. Selezionare *volumi* > *istantanee*.
+. In alternativa, selezionare *volumi* > *volumi attivi* e nella colonna Actions (azioni), selezionare image:more_information.PNG["ulteriori informazioni"] Per il volume desiderato e selezionare *View Snapshots* (Visualizza snapshot).
+. (Facoltativo) è possibile esportare l'elenco di snapshot come file CSV selezionando image:export_button.PNG["pulsante export (esporta)"] icona.
+
+
+Il seguente elenco descrive i dettagli disponibili:
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| ID | Visualizza l'ID dello snapshot assegnato allo snapshot. 
+
+
+| ID volume | ID fornito al momento della creazione del volume. 
+
+
+| ID account | ID dell'account assegnato al volume. 
+
+
+| UUID | Identificatore univoco universale. 
+
+
+| Dimensione | Dimensione dello snapshot definita dall'utente. 
+
+
+| Volume Size (dimensione volume) | Dimensione del volume da cui è stato creato lo snapshot. 
+
+
+| Tempo di creazione | L'ora in cui è stata creata l'istantanea. 
+
+
+| Conservare fino a. | Il giorno e l'ora in cui lo snapshot viene cancellato. 
+
+
+| ID snapshot di gruppo | L'ID del gruppo a cui appartiene lo snapshot se raggruppato insieme ad altri snapshot di volume. 
+
+
+| Replicato  a| 
+Visualizza lo stato dello snapshot sul cluster remoto:
+
+* Presente: Lo snapshot esiste in un cluster remoto.
+* Non presente: Lo snapshot non esiste su un cluster remoto.
+* Sincronizzazione: Il cluster di destinazione sta attualmente replicando lo snapshot.
+* Cancellato: La destinazione ha replicato lo snapshot e lo ha cancellato.
+
+
+|===
+
+
+== Pianificazioni di Snapshot
+
+Dalla pagina *Volumes* > *Snapshot Schedules*, disponibile nel pannello laterale di un cluster selezionato, è possibile visualizzare i dettagli della pianificazione delle istantanee.
+
+È possibile esportare l'elenco di pianificazione snapshot come file CSV selezionando image:export_button.PNG["Pulsante Export (Esporta)"] icona.
+
+Il seguente elenco descrive i dettagli disponibili:
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| ID | L'ID del programma assegnato al programma. 
+
+
+| Nome | Nome assegnato dall'utente della pianificazione. 
+
+
+| Frequenza | La frequenza con cui viene eseguita la pianificazione. La frequenza può essere impostata in ore e minuti, settimane o mesi. 
+
+
+| Ricorrente | Indica se la pianificazione è ricorrente o meno. 
+
+
+| ID volume | Gli ID del volume inclusi nello snapshot pianificato. 
+
+
+| Ultima esecuzione | L'ultima volta in cui è stata eseguita la pianificazione. 
+
+
+| Last Run Status (Stato ultima esecuzione) | Il risultato dell'ultima esecuzione del programma. Valori possibili: `Success` oppure `Error` 
+
+
+| In pausa manuale | Identifica se la pianificazione è stata messa in pausa manualmente. 
+|===
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

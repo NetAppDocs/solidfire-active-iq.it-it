@@ -1,0 +1,55 @@
+---
+permalink: task_active_iq_drives.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, drives 
+summary: 'Scopri di più sulla pagina Drives (unità) di SolidFire Active IQ.' 
+---
+= Dischi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ogni nodo contiene uno o più dischi fisici, che vengono utilizzati per memorizzare una parte dei dati per il cluster. Il cluster utilizza la capacità e le prestazioni del disco dopo che il disco è stato aggiunto correttamente a un cluster.
+
+Nella pagina *Drives*, disponibile nel pannello laterale di un cluster selezionato, è possibile filtrare la pagina selezionando dalle schede *Active*, *Available* e *Failed*.
+
+Le seguenti informazioni sono disponibili per ogni disco nel cluster a seconda dello stato della funzionalità del disco:
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| ID disco | Numero sequenziale assegnato al disco. 
+
+
+| ID nodo | Numero di nodo assegnato quando il nodo viene aggiunto al cluster. 
+
+
+| ID servizio | L'ID servizio corrente del servizio a blocchi o a strati associato al disco. 
+
+
+| Slot | Numero di slot in cui si trova fisicamente l'unità. 
+
+
+| Capacità | Gigabyte del disco. 
+
+
+| Versione del firmware | Versione del firmware sul disco rigido. 
+
+
+| Seriale | Numero di serie dell'SSD. 
+
+
+| Usura | Indicatore del livello di usura rimanente. 
+
+
+| Tipo | Il tipo di disco può essere un blocco o metadati. 
+|===
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

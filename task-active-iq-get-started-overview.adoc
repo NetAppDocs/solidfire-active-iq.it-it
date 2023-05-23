@@ -1,0 +1,25 @@
+---
+permalink: task-active-iq-get-started-overview.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, started 
+summary: Scopri come iniziare a utilizzare SolidFire Active IQ. 
+---
+= Inizia a utilizzare SolidFire Active IQ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Lo strumento SolidFire Active IQ semplifica il monitoraggio della capacità e delle performance, oltre a essere informato sullo stato dei cluster, e lo rende accessibile da qualsiasi luogo. Qualunque sia il modo in cui utilizzi SolidFire Active IQ, prima di iniziare a utilizzarlo è necessario conoscere diversi aspetti:
+
+* link:concept-active-iq-learn-about-active-iq.html["Scopri di più su SolidFire Active IQ"]: È necessario conoscere il funzionamento di SolidFire Active IQ e le informazioni raccolte.
+* link:task-active-iq-enable-reporting.html["Abilitare il reporting SolidFire Active IQ"]: È necessario attivare la funzionalità di reporting SolidFire Active IQ sul nodo di gestione prima che il server Active IQ possa connettersi a un cluster e ricevere informazioni sul cluster.
+* link:task-active-iq-use-the-user-interface.html["Utilizzare l'interfaccia utente di SolidFire Active IQ"]: Ulteriori informazioni sulle funzionalità nuove o migliorate, come il filtraggio, l'ordinamento, l'esportazione dei dati e la selezione dei cluster.
+
+
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

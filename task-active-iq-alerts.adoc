@@ -1,0 +1,412 @@
+---
+permalink: task-active-iq-alerts.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, alerts 
+summary: Scopri le attività relative agli avvisi in SolidFire Active IQ. 
+---
+= Avvisi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dal menu a discesa *Alerts* all'interno di *All Clusters View*, è possibile visualizzare la cronologia degli avvisi, creare e gestire le policy di avviso e visualizzare ed eliminare le notifiche del cluster.
+
+Scopri o esegui attività correlate agli avvisi:
+
+* <<Visualizza la cronologia degli avvisi>>
+* <<Dettagli della cronologia degli avvisi>>
+* <<Visualizzare le policy di avviso>>
+* <<create_alert_policy,Creare una policy di avviso>>
+* <<alert_policy_types,Tipi di criteri di avviso>>
+* <<Modificare una policy di avviso>>
+* <<Eliminare una policy di avviso>>
+* <<Visualizzare i cluster sospesi>>
+* <<Elimina le notifiche del cluster>>
+* <<Terminare la soppressione del cluster da un cluster>>
+* <<E-mail di notifica degli avvisi>>
+
+
+
+
+== Visualizza la cronologia degli avvisi
+
+È possibile visualizzare la cronologia degli avvisi non risolti o risolti.
+
+.Fasi
+. Selezionare *Avvisi* > *Cronologia*.
+. Selezionare la scheda *Unresolved* o *Resolved* per visualizzare la cronologia degli avvisi per il cluster.
+. (Facoltativo) selezionare image:export_button.PNG["Pulsante Export (Esporta)"] Per esportare i dati in un file CSV.
+
+
+
+
+== Dettagli della cronologia degli avvisi
+
+La pagina *Cronologia* del menu a discesa Avvisi nella vista tutti i cluster mostra fino a 10000 voci della cronologia degli avvisi, inclusi tutti gli avvisi non risolti e gli avvisi risolti negli ultimi 30 giorni.
+
+L'elenco seguente descrive i dettagli disponibili:
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| ID avviso | ID univoco per ogni avviso. 
+
+
+| Attivato | L'ora in cui l'avviso è stato attivato in SolidFire Active IQ, non nel cluster stesso. 
+
+
+| Ultima notifica | L'ora in cui è stata inviata l'e-mail di avviso più recente. 
+
+
+| Risolto | Indica se la causa dell'avviso è stata risolta. 
+
+
+| Tempo di risoluzione | Il momento in cui un problema è stato risolto. 
+
+
+| Policy | Questo è il nome del criterio di avviso definito dall'utente. 
+
+
+| Severità | Severità assegnata al momento della creazione del criterio di avviso. 
+
+
+| Destinazione | L'indirizzo e-mail o gli indirizzi selezionati per ricevere l'e-mail di avviso. 
+
+
+| Azienda | Nome del cliente associato all'avviso. 
+
+
+| Cluster | Visualizza il nome del cluster per cui è stato aggiunto il criterio di avviso. 
+
+
+| Attivazione | L'impostazione definita dall'utente che ha attivato l'avviso. 
+|===
+
+
+== Visualizzare le policy di avviso
+
+La pagina *Policies* del menu a discesa *Alerts* in *All Clusters View* mostra le seguenti informazioni relative ai criteri per tutti i cluster.
+
+L'elenco seguente descrive i dettagli disponibili:
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| Nome policy | Nome del criterio di avviso definito dall'utente. 
+
+
+| Destinazione | Indirizzo e-mail definito nella policy di avviso. 
+
+
+| Severità | Severità assegnata nella policy di avviso. 
+
+
+| Cluster | Numero e nome di ciascun cluster definito nella policy di allerta. Selezionare l'icona delle informazioni per visualizzare i cluster associati. 
+
+
+| Condizione | Impostazione definita dall'utente per l'attivazione di un avviso. 
+
+
+| Tipi di soppressione  a| 
+Determina quali avvisi ed eventi vengono soppressi. Sono possibili i seguenti tipi:
+
+* *Full*: Tutti gli avvisi del cluster vengono soppressi per la durata specificata. Non vengono generati casi di supporto o avvisi via email.
+* *Upgrade*: Gli avvisi cluster non critici vengono soppressi per la durata specificata. Gli avvisi critici continuano a generare casi di supporto ed e-mail.
+* *Calcolo*: Gli avvisi attivati da VMware sui nodi di calcolo vengono soppressi.
+* *Nodehardware*: Gli avvisi associati alla manutenzione del nodo vengono soppressi. Ad esempio, sostituire i dischi o portare i nodi offline.
+* *Drive*: Gli avvisi associati allo stato del disco vengono soppressi.
+* *Rete*: Gli avvisi associati alla configurazione e allo stato di salute della rete vengono soppressi.
+* *Alimentazione*: Gli avvisi di ridondanza dell'alimentazione vengono soppressi. Non elimina un avviso _nodeOffline_ che si verificherebbe in caso di interruzione totale dell'alimentazione.
+
+
+
+
+| Azioni | Selezionare il menu a discesa verticale per le opzioni di modifica ed eliminazione del criterio selezionato. 
+|===
+
+
+== Creare una policy di avviso
+
+È possibile creare un criterio di avviso per monitorare le informazioni dalla vista *tutti i cluster* di SolidFire Active IQ. Le policy di avviso consentono di essere avvisati di uno stato o di un evento di performance con uno o più cluster in un'installazione, in modo che sia possibile intraprendere un'azione prima o in risposta a un evento più grave.
+
+.Fasi
+. Selezionare *Avvisi* > *Criteri*.
+. Selezionare *Crea policy*.
+. Selezionare un tipo di avviso dall'elenco *Policy Type* (tipo di policy). Vedere <<alert_policy_types,Tipi di criteri di avviso>>.
++
+
+NOTE: Nella finestra di dialogo *Crea policy* sono disponibili ulteriori campi specifici a seconda del tipo di policy selezionato.
+
+. Immettere un nome per la nuova policy di avviso.
++
+
+NOTE: I nomi dei criteri di avviso devono descrivere la condizione per cui viene creato l'avviso. I titoli descrittivi consentono di identificare facilmente l'avviso. I nomi dei criteri di avviso vengono visualizzati come riferimento in un'altra parte del sistema.
+
+. Selezionare un livello di severità.
++
+
+TIP: I livelli di severità delle policy di avviso sono codificati a colori e possono essere filtrati facilmente dalla pagina *Avvisi* > *Cronologia*.
+
+. Determinare il tipo di soppressione per la policy di avviso selezionando un tipo da *tipi supportati*. È possibile selezionare più tipi.
++
+Confermare che le associazioni hanno senso. Ad esempio, è stata selezionata l'opzione *soppressione rete* per un criterio di avviso di rete.
+
+. Selezionare uno o più cluster da includere nel criterio.
++
+
+CAUTION: Quando si aggiunge un nuovo cluster all'installazione dopo aver creato il criterio, il cluster non viene aggiunto automaticamente ai criteri di avviso esistenti. È necessario modificare un criterio di avviso esistente e selezionare il nuovo cluster che si desidera associare al criterio.
+
+. Inserire uno o più indirizzi e-mail a cui verranno inviate le notifiche di avviso. Se si immettono più indirizzi, è necessario utilizzare una virgola per separare ciascun indirizzo.
+. Selezionare *Save Alert Policy* (Salva policy di avviso).
+
+
+
+
+== Tipi di criteri di avviso
+
+È possibile creare criteri di avviso in base ai tipi di criteri disponibili elencati nella finestra di dialogo *Crea policy* da *Allarmi* > *Criteri*.
+
+Gli avvisi di policy disponibili includono i seguenti tipi:
+
+[cols="25,75"]
+|===
+| Tipo di policy | Descrizione 
+
+
+| Guasto del cluster | Invia una notifica quando si verifica un tipo specifico o un qualsiasi tipo di guasto del cluster. 
+
+
+| Evento | Invia una notifica quando si verifica un tipo di evento specifico. 
+
+
+| Disco guasto | Invia una notifica quando si verifica un guasto al disco. 
+
+
+| Unità disponibile | Invia una notifica quando un disco entra in linea nello stato _Available_. 
+
+
+| Utilizzo del cluster | Invia una notifica quando la capacità e le performance del cluster in uso sono superiori alla percentuale specificata. 
+
+
+| Spazio utilizzabile | Invia una notifica quando lo spazio del cluster utilizzabile è inferiore a una percentuale specificata. 
+
+
+| Spazio provisionabile | Invia una notifica quando lo spazio del cluster di cui è possibile eseguire il provisioning è inferiore a una percentuale specificata. 
+
+
+| Il raccoglitore non segnala | Invia una notifica quando il collector per SolidFire Active IQ eseguito sul nodo di gestione non riesce a inviare dati a SolidFire Active IQ per la durata specificata. 
+
+
+| Usura del disco | Invia una notifica quando un disco in un cluster ha meno di una percentuale specificata di usura o spazio riservato rimanente. 
+
+
+| Sessioni iSCSI | Invia una notifica quando il numero di sessioni iSCSI attive è superiore al valore specificato. 
+
+
+| Resilienza dello chassis | Invia una notifica quando lo spazio utilizzato di un cluster è maggiore di una percentuale specificata dall'utente. Prima di raggiungere la soglia di resilienza del cluster, è necessario selezionare una percentuale sufficiente a fornire un preavviso anticipato. Una volta raggiunta questa soglia, un cluster non può più eseguire automaticamente la riparazione a causa di un guasto a livello di chassis. 
+
+
+| Allarme VMware | Invia una notifica quando un allarme VMware viene attivato e segnalato a SolidFire Active IQ. 
+
+
+| Resilienza del dominio di protezione personalizzata | Quando lo spazio utilizzato supera la percentuale specificata della soglia di resilienza del dominio di protezione personalizzato, il sistema invia una notifica. Se questa percentuale raggiunge 100, il cluster di storage non dispone di capacità libera sufficiente per eseguire la riparazione automatica in seguito a un errore del dominio di protezione personalizzato. 
+
+
+| File core/Crash Dump del nodo | Quando un servizio non risponde e deve essere riavviato, il sistema crea un file core o un file di crash dump e invia una notifica. Questo non è il comportamento previsto durante le normali operazioni. 
+|===
+
+
+== Modificare una policy di avviso
+
+È possibile modificare un criterio di avviso per aggiungere o rimuovere cluster da un criterio o modificare impostazioni di policy aggiuntive.
+
+.Fasi
+. Selezionare *Avvisi* > *Criteri*.
+. Selezionare il menu per ulteriori opzioni in *azioni*.
+. Selezionare *Modifica policy*.
++
+
+NOTE: Il tipo di policy e i criteri di monitoraggio specifici del tipo non sono modificabili.
+
+. (Facoltativo) inserire un nome modificato per la nuova policy di avviso.
++
+
+NOTE: I nomi dei criteri di avviso devono descrivere la condizione per cui viene creato l'avviso. I titoli descrittivi consentono di identificare facilmente l'avviso. I nomi dei criteri di avviso vengono visualizzati come riferimento in un'altra parte del sistema.
+
+. (Facoltativo) selezionare un livello di severità diverso.
++
+
+TIP: I livelli di gravità della policy di avviso sono codificati a colori e possono essere filtrati facilmente dalla pagina Avvisi > Cronologia.
+
+. Determinare il tipo di soppressione per la policy di avviso quando è attiva selezionando un tipo da *tipi supportati*. È possibile selezionare più tipi.
++
+Confermare che le associazioni hanno senso. Ad esempio, è stata selezionata l'opzione *soppressione rete* per un criterio di avviso di rete.
+
+. (Facoltativo) selezionare o rimuovere le associazioni di cluster con il criterio.
++
+
+CAUTION: Quando si aggiunge un nuovo cluster all'installazione dopo aver creato il criterio, il cluster non viene aggiunto automaticamente ai criteri di avviso esistenti. Selezionare il nuovo cluster che si desidera associare al criterio.
+
+. (Facoltativo) modificare uno o più indirizzi e-mail a cui verranno inviate le notifiche di avviso. Se si immettono più indirizzi, è necessario utilizzare una virgola per separare ciascun indirizzo.
+. Selezionare *Save Alert Policy* (Salva policy di avviso).
+
+
+
+
+== Eliminare una policy di avviso
+
+L'eliminazione di un criterio di avviso lo rimuove in modo permanente dal sistema. Le notifiche e-mail non vengono più inviate per quel criterio e le associazioni di cluster con il criterio vengono rimosse.
+
+.Fasi
+. Selezionare *Avvisi* > *Criteri*.
+. In *azioni*, selezionare il menu per ulteriori opzioni.
+. Selezionare *Delete Policy* (Elimina policy).
+. Confermare l'azione.
++
+Il criterio viene rimosso in modo permanente dal sistema.
+
+
+
+
+
+== Visualizzare i cluster sospesi
+
+Nella pagina *Clusters soppressi* del menu a discesa *Alerts* della vista *All Clusters*, è possibile visualizzare un elenco di cluster con notifiche di avviso soppresse.
+
+Il supporto NetApp o i clienti possono eliminare le notifiche di avviso per un cluster durante l'esecuzione della manutenzione. Quando le notifiche vengono soppresse per un cluster che utilizza la soppressione dell'aggiornamento, gli avvisi comuni che si verificano durante gli aggiornamenti non vengono inviati. È inoltre disponibile un'opzione di eliminazione completa degli avvisi che interrompe la notifica degli avvisi per un cluster per un periodo di tempo specificato. È possibile visualizzare gli avvisi e-mail che non vengono inviati quando le notifiche vengono soppresse nella pagina *Cronologia* del menu *Avvisi*. Le notifiche soppresse vengono riattivate automaticamente allo scadere della durata definita. È possibile terminare la soppressione delle notifiche in anticipo selezionando "Riprendi notifiche" nel menu a discesa.
+
+Le seguenti informazioni sono disponibili nella pagina *Clusters soppressi*.
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| Azienda | Nome della società assegnato al cluster. 
+
+
+| ID cluster | Numero del cluster assegnato al momento della creazione del cluster. 
+
+
+| Nome cluster | Nome assegnato al cluster. 
+
+
+| Ora di inizio | L'ora esatta in cui è stata avviata o pianificata l'eliminazione delle notifiche. 
+
+
+| Ora di fine | L'ora esatta in cui la soppressione delle notifiche è pianificata per terminare 
+
+
+| Tipo  a| 
+Determina quali avvisi ed eventi vengono soppressi. Sono possibili i seguenti tipi:
+
+* *Full*: Tutti gli avvisi del cluster vengono soppressi per la durata specificata. Non vengono generati casi di supporto o avvisi via email.
+* *Upgrade*: Gli avvisi cluster non critici vengono soppressi per la durata specificata. Gli avvisi critici continuano a generare casi di supporto ed e-mail.
+* *Calcolo*: Gli avvisi attivati da VMware sui nodi di calcolo vengono soppressi.
+* *Nodehardware*: Gli avvisi associati alla manutenzione del nodo vengono soppressi. Ad esempio, sostituire i dischi o portare i nodi offline.
+* *Drive*: Gli avvisi associati allo stato del disco vengono soppressi.
+* *Rete*: Gli avvisi associati alla configurazione e allo stato di salute della rete vengono soppressi.
+* *Alimentazione*: Gli avvisi di ridondanza dell'alimentazione vengono soppressi. Non elimina un avviso _nodeOffline_ che si verificherebbe in caso di interruzione totale dell'alimentazione.
+
+
+
+
+| Stato  a| 
+Indica lo stato di una notifica di avviso:
+
+* *Attivo*: La soppressione delle notifiche di avviso è attiva.
+* *Futuro*: La soppressione delle notifiche di avviso è pianificata per una data e un'ora future.
+
+
+
+
+| Azioni | Selezionare l'opzione per sospendere o riprendere le notifiche per un cluster. 
+|===
+
+
+== Elimina le notifiche del cluster
+
+È possibile eliminare le notifiche di avviso a livello di cluster per un singolo cluster o più cluster per la data e l'ora correnti o la pianificazione per iniziare a una data e ora future.
+
+.Fasi
+. Effettuare una delle seguenti operazioni:
++
+.. Dalla panoramica *Dashboard*, selezionare il menu Actions (azioni) per il cluster che si desidera sospendere.
+.. Da *Alerts* > *Cluster Suppression*, selezionare *Sospendi cluster*.
+
+
+. Nella finestra di dialogo *Sospendi avvisi per cluster*, procedere come segue:
++
+.. Se si seleziona il pulsante *Sospendi cluster* dalla pagina *Clusters sospesi*, selezionare un cluster.
+.. Selezionare un tipo di eliminazione degli avvisi come *Full*, *Upgrades*, *Compute*, *Nodehardware*, *Drive*, *Rete* o *alimentazione*. <<suppressed_types,Scopri i tipi di soppressione>>.
++
+
+NOTE: Un cluster può avere diversi tipi di soppressione, che possono includere più selezioni dello stesso tipo di soppressione. Quando un tipo di soppressione esiste già durante una finestra di soppressione pianificata, viene disattivato. Per selezionare nuovamente questo tipo di soppressione, selezionare *sovrapposizione esistente*. Le selezioni multiple dello stesso tipo di soppressione possono avere tempi di sovrapposizione o, se si pianificano soppressioni future, possono avere tempi diversi. Quando due soppressioni hanno periodi di tempo sovrapposti, la funzionalità è la stessa di una singola soppressione con un'ora di inizio che inizia al più presto e un'ora di fine che termina al più tardi.
+
+.. Selezionare la data e l'ora di inizio della soppressione delle notifiche.
+.. Selezionare una durata comune o inserire una data e un'ora di fine personalizzate durante le quali le notifiche devono essere soppresse.
+
+
+. Selezionare *Sospendi*.
++
+
+NOTE: Questa azione elimina anche alcune o tutte le notifiche al supporto NetApp. Una volta che la soppressione del cluster è attiva, il supporto NetApp o qualsiasi utente autorizzato a visualizzare il cluster può aggiornare lo stato di soppressione.
+
+
+
+
+
+== Terminare la soppressione del cluster da un cluster
+
+È possibile terminare la soppressione degli avvisi del cluster sui cluster applicati utilizzando la funzione Sospendi cluster. Ciò consente ai cluster di riprendere il normale stato di reporting degli avvisi.
+
+.Fasi
+. Dalla panoramica *Dashboard* o *Alerts* > *Cluster Suppression*, terminare la soppressione per uno o più cluster che si desidera riprendere la normale segnalazione degli avvisi:
++
+.. Per un singolo cluster, selezionare il menu Actions (azioni) per il cluster e selezionare *End Suppression (fine soppressione)*.
+.. Per più cluster, selezionare i cluster, quindi selezionare *End Selected Supppressions* (fine delle soppressioni selezionate).
+
+
+
+
+
+
+== E-mail di notifica degli avvisi
+
+Gli abbonati agli avvisi SolidFire Active IQ ricevono messaggi di posta elettronica di stato diversi per ogni avviso che si attiva nel sistema. Esistono tre tipi di email di stato associate agli avvisi:
+
+[cols="35,65"]
+|===
+
+
+| Nuova e-mail di avviso | Questo tipo di email viene inviato quando viene attivato un avviso. 
+
+
+| E-mail di avviso promemoria | Questo tipo di messaggio e-mail viene inviato ogni 24 ore finché l'avviso rimane attivo. 
+
+
+| E-mail di avviso risolta | Questo tipo di messaggio e-mail viene inviato quando il problema viene risolto. 
+|===
+Una volta creata una policy di avviso e se viene generato un nuovo avviso per questa policy, viene inviata un'email all'indirizzo email designato (vedere <<create_alert_policy,Creare una policy di avviso>>).
+
+La riga dell'oggetto dell'e-mail di avviso utilizza uno dei seguenti formati, a seconda del tipo di errore riportato:
+
+* Guasto del cluster non risolto: `[cluster fault code] fault on [cluster name] ([severity])`
+* Guasto del cluster risolto: `Resolved: [cluster fault code] fault on [cluster name] ([severity])`
+* Avviso irrisolto: `[policy name] alert on [cluster name] ([severity])`
+* Risolto il problema di allerta: `Resolved: [policy name] alert on [cluster name] ([severity])`
+
+
+Il contenuto dell'e-mail di notifica sarà simile al seguente esempio:image:example_email.PNG["Email di esempio"]
+
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

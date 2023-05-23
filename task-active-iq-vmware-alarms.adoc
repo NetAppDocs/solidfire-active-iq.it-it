@@ -1,0 +1,47 @@
+---
+permalink: task-active-iq-vmware-alarms.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, all, vmware, alarm, hci 
+summary: Scopri di più sulla pagina degli allarmi VMware in SolidFire Active IQ. 
+---
+= Allarmi VMware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dalla pagina *Allarmi VMware*, disponibile sul pannello laterale di un cluster NetApp HCI selezionato, è possibile visualizzare le informazioni relative agli allarmi VMware relative a un cluster.
+
+
+NOTE: La pagina *Allarmi VMware* è disponibile solo su un cluster NetApp HCI.
+
+Informazioni sui dati degli allarmi VMware visualizzati nell'interfaccia utente.
+
+[cols="30,70"]
+|===
+| Intestazione | Descrizione 
+
+
+| IP vCenter | Indirizzo IP del server vCenter. 
+
+
+| ID entità | L'ID dell'oggetto in vSphere in cui è stato generato l'allarme. 
+
+
+| Stato | Severità dell'allarme VMware. 
+
+
+| Nome allarme | Nome dell'allarme VMware. 
+
+
+| Descrizione | Descrizione dell'allarme VMware. 
+
+
+| Tempo di attivazione | L'ora in cui l'avviso è stato attivato in SolidFire Active IQ, non nel cluster stesso. 
+|===
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

@@ -1,0 +1,66 @@
+---
+permalink: task-active-iq-throttling.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, nodes, throttling 
+summary: Scopri di più sulla pagina Node Throttling in SolidFire Active IQ. 
+---
+= Rallentamento del nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dalla pagina *QoS Management* > *Node Throttling*, disponibile nel pannello laterale per un cluster selezionato, è possibile visualizzare la percentuale di rallentamento per i nodi nel cluster. I nodi sono elencati come layout di miniature sul lato sinistro del display e sono ordinati in base al grado di rallentamento per un intervallo di tempo selezionato.
+
+Scopri di più sulla visualizzazione delle informazioni sulla limitazione dei nodi:
+
+* <<Visualizzare i grafici e selezionare gli intervalli di date>>
+* <<Esportare i dati di rallentamento del nodo>>
+
+
+
+
+== Visualizzare i grafici e selezionare gli intervalli di date
+
+I grafici e gli intervalli di date di SolidFire Active IQ sono perfettamente integrati tra loro. Quando si seleziona un intervallo di date, i grafici *Node Throttling* (rallentamento nodo) e *Total Volume throughput* (throughput volume totale) in quella pagina si adattano all'intervallo selezionato. L'intervallo di date predefinito visualizzato per ciascun grafico è di sette giorni. Quando si seleziona un nodo dalle schede di selezione del grafico, questi grafici vengono modificati nel nodo appena selezionato.
+
+È possibile selezionare un intervallo di date dalla casella a discesa del calendario o da una serie di intervalli predefiniti. Gli intervalli di date vengono calcolati utilizzando l'ora corrente del browser (al momento della selezione) e il periodo di tempo configurato. Inoltre, è possibile selezionare un intervallo desiderato sfiorando direttamente il grafico a barre nella parte inferiore. È possibile passare da un grafico all'altro selezionando i layout delle miniature a sinistra.
+
+Il grafico *Node Throttling* mostra la limitazione del nodo nel periodo di tempo selezionato in base alle impostazioni IOPS minime e massime per i volumi ospitati sul nodo selezionato. Il colore rappresenta la quantità di rallentamento:
+
+* Verde: Il nodo non viene rallentato. Ai volumi è consentito eseguire fino al numero massimo di IOPS configurati.
+* Giallo: Il nodo sta riscontrando un rallentamento limitato. I volumi vengono rallentati rispetto all'impostazione massima degli IOPS, ma mantengono comunque le performance pari o superiori all'impostazione minima degli IOPS.
+* Rosso: Il nodo sta riscontrando un rallentamento elevato. Quando i volumi vengono rallentati in modo più severo, le performance possono scendere al di sotto dell'impostazione minima degli IOPS.
+
+
+Il grafico *Total Volume throughput* visualizza la somma del throughput per i volumi primari di un nodo selezionato. Il grafico mostra la somma del throughput di lettura e scrittura del volume. Non include metadati o altro traffico di nodi. Inoltre, tiene conto della presenza di volumi su un nodo, con conseguente diminuzione del throughput quando i volumi vengono trasferiti da un nodo.
+
+.Espandere l'esempio di grafico
+[%collapsible]
+====
+image:node_throttling_range.PNG["Grafico di limitazione del nodo"]
+
+====
+Posizionare il puntatore del mouse in qualsiasi punto del grafico per visualizzare i dettagli relativi al punto nel tempo.
+
+link:task-active-iq-qos-recommendations.html["Scopri le raccomandazioni QoS per un cluster"].
+
+
+NOTE: Dalla pagina Node Throttling (rallentamento dei nodi), è possibile determinare se è presente un push-back QoS in un cluster di storage, vedere questa sezione https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_to_check_for_QoS_pushback_in_Element_Software["Articolo della Knowledge base"^] per informazioni.
+
+
+
+== Esportare i dati di rallentamento del nodo
+
+È possibile esportare i dati del grafico in un formato CSV (comma-Separated Values). Vengono esportate solo le informazioni visualizzate nel grafico.
+
+.Fasi
+. In una vista elenco o in un grafico, selezionare image:export_button.PNG["Pulsante Export (Esporta)"] icona.
+
+
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

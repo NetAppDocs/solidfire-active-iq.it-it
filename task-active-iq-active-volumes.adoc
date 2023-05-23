@@ -1,0 +1,221 @@
+---
+permalink: task-active-iq-active-volumes.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, active, volumes 
+summary: Scopri come visualizzare i dettagli del volume in SolidFire Active IQ. 
+---
+= Volumi attivi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dalla pagina *Volumes* è possibile visualizzare i dettagli relativi ai volumi attivi, ai singoli volumi e ai grafici delle performance:
+
+* <<Visualizzare i dettagli del volume attivo>>
+* <<Visualizzare i dettagli dei singoli volumi>>
+* <<Visualizza i grafici delle performance dei singoli volumi>>
+
+
+
+
+== Visualizzare i dettagli del volume attivo
+
+Nella pagina *volumi* > *volumi attivi* di un cluster selezionato, è possibile visualizzare le seguenti informazioni nell'elenco dei volumi attivi.
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| ID | ID fornito al momento della creazione del volume. 
+
+
+| ID account | ID dell'account assegnato al volume. 
+
+
+| Volume Size (dimensione volume) | Dimensione del volume da cui è stato creato lo snapshot. 
+
+
+| Capacità utilizzata  a| 
+Capacità corrente utilizzata del volume:
+
+* Verde = fino al 80%
+* Giallo = superiore al 80%
+* Rosso = superiore al 95%
+
+
+
+
+| ID nodo primario | Nodo primario per questo volume. 
+
+
+| ID nodo secondario | Elenco dei nodi secondari per questo volume. Può essere costituito da più valori durante gli stati transitori, come il cambiamento dei nodi secondari, ma di solito avrà un singolo valore. 
+
+
+| Accelerazione QoS  a| 
+Identifica se il volume viene rallentato a causa di un carico elevato sul nodo di storage primario:
+
+* Verde = fino al 20%
+* Giallo = superiore al 20%
+* Rosso = superiore al 80%
+
+
+
+
+| IOPS minimi | Il numero minimo di IOPS garantiti per il volume. 
+
+
+| IOPS max | Il numero massimo di IOPS consentito per il volume. 
+
+
+| IOPS burst | Il numero massimo di IOPS consentito in un breve periodo di tempo. 
+
+
+| IOPS medi ultimi 30 minuti | Il numero medio di IOPS eseguiti per tutti i volumi che hanno questo nodo come principale. Gli IOPS vengono raccolti a intervalli di 500 millisecondi sul lato del cluster. SolidFire Active IQ raccoglie questi valori a intervalli di 60 secondi. Per ogni volume, gli IOPS medi vengono calcolati in base ai valori SolidFire Active IQ raccolti negli ultimi 30 minuti. 
+
+
+| Throughput medio ultimi 30 minuti | Il throughput medio eseguito per tutti i volumi che hanno questo nodo come principale. Il throughput viene raccolto a intervalli di 500 millisecondi sul lato del cluster. SolidFire Active IQ raccoglie questi valori a intervalli di 60 secondi. Per ciascun volume, il throughput medio viene calcolato in base ai valori SolidFire Active IQ raccolti negli ultimi 30 minuti. 
+
+
+| Latenza media (µs) ultimi 30 minuti | Il tempo medio in microsecondi per completare le operazioni di lettura e scrittura su tutti i volumi che hanno questo nodo come principale. La latenza viene misurata su intervalli di 500 millisecondi sul lato del cluster. SolidFire Active IQ raccoglie questi valori a intervalli di 60 secondi. Per ogni volume, la latenza media viene calcolata in base ai valori SolidFire Active IQ raccolti negli ultimi 30 minuti. Per ulteriori informazioni, consulta questa sezione https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_is_read_and_write_latency_measured_in_Element_Software_%3F["Articolo della Knowledge base"^]. 
+
+
+| Snapshot | Il numero di snapshot creati per il volume. 
+
+
+| Azioni | Selezionare il menu a discesa verticale per ulteriori dettagli su un singolo volume. 
+|===
+
+
+== Visualizzare i dettagli dei singoli volumi
+
+Dalla pagina *Volumes* è possibile visualizzare ulteriori informazioni per un singolo volume.
+
+.Fasi
+. Selezionare *volumi* > *volumi attivi*.
+. Nella colonna Actions (azioni), selezionare image:more_information.PNG["Ulteriori informazioni"] Per il volume desiderato e selezionare *Visualizza dettagli*.
+
+
+Una volta aperta la pagina per il volume attivo, è possibile visualizzare i dati del volume recenti dalla barra delle informazioni.
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| ID account | ID generato dal sistema per il volume. 
+
+
+| Volume Size (dimensione volume) | Dimensione totale del volume. 
+
+
+| Capacità utilizzata  a| 
+Mostra quanto è pieno il volume:
+
+* Verde = fino al 80%
+* Giallo = superiore al 80%
+* Rosso = superiore al 95%.
+
+
+
+
+| IOPS medi | Numero medio di IOPS eseguiti rispetto al volume negli ultimi 30 minuti. 
+
+
+| Throughput medio | Throughput medio eseguito rispetto al volume negli ultimi 30 minuti. 
+
+
+| Latenza media | Il tempo medio, in microsecondi, per completare le operazioni di lettura e scrittura nel volume negli ultimi 30 minuti. Per ulteriori informazioni, consulta questa sezione https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_is_read_and_write_latency_measured_in_Element_Software_%3F["Articolo della Knowledge base"^]. 
+
+
+2+| È possibile visualizzare ulteriori dettagli dal menu a discesa *Show Volume Details* (Mostra dettagli volume). 
+
+
+| Accesso | Le autorizzazioni di lettura/scrittura assegnate al volume. 
+
+
+| Gruppi di accesso | Gruppi di accesso al volume associati. 
+
+
+| Blocchi diversi da zero | Numero totale di blocchi da 4 KiB con dati dopo il completamento dell'ultimo round dell'operazione di garbage collection. 
+
+
+| Zero blocchi | Numero totale di blocchi 4KiB senza dati dopo il completamento dell'ultimo ciclo di operazioni di garbage collection. 
+
+
+| Numero di snapshot | Il numero di snapshot associati. 
+
+
+| IOPS minimi | Il numero minimo di IOPS garantiti per il volume. 
+
+
+| IOPS max | Il numero massimo di IOPS consentito per il volume. 
+
+
+| IOPS burst | Il numero massimo di IOPS consentito in un breve periodo di tempo. 
+
+
+| 512e attivato | Identifica se 512e è attivato su un volume. 
+
+
+| Accelerazione QoS | Identifica se il volume viene rallentato a causa di un carico elevato sul nodo di storage primario. 
+
+
+| ID nodo primario | Nodo primario per questo volume. 
+
+
+| ID nodo secondario | Elenco dei nodi secondari per questo volume. Può essere costituito da più valori durante gli stati transitori, come il cambiamento dei nodi secondari, ma di solito avrà un singolo valore. 
+
+
+| Volumi accoppiati | Indica se un volume è stato associato o meno. 
+
+
+| Tempo di creazione | L'ora in cui è stata completata l'attività di creazione del volume. 
+
+
+| Dimensione del blocco | Dimensione dei blocchi sul volume. 
+
+
+| IQN | Il nome qualificato iSCSI (IQN) del volume. 
+
+
+| ScsiEUIDeviceID | Identificatore univoco globale del dispositivo SCSI per il volume nel formato a 16 byte basato su EUI-64. 
+
+
+| ID scsiNAADeviceID | Identificatore univoco globale del dispositivo SCSI per il volume in formato NAA IEEE Registered Extended. 
+
+
+| Attributi | Elenco delle coppie Nome/valore nel formato oggetto JSON. 
+|===
+
+
+== Visualizza i grafici delle performance dei singoli volumi
+
+Dalla pagina *Volumes*, è possibile visualizzare l'attività delle performance per ogni volume in un formato grafico. Queste informazioni forniscono statistiche in tempo reale per throughput, IOPS, latenza, profondità della coda, dimensione media io, e capacità per ciascun volume.
+
+.Fasi
+. Selezionare *volumi* > *volumi attivi*.
+. Nella colonna *azioni*, selezionare image:more_information.PNG["Ulteriori informazioni"] Per il volume desiderato e selezionare *Visualizza dettagli*.
++
+Viene visualizzata una pagina separata per visualizzare una timeline regolabile, sincronizzata con i grafici delle prestazioni.
+
+. A sinistra, selezionare un grafico in miniatura per visualizzare i grafici delle prestazioni in dettaglio. È possibile visualizzare i seguenti grafici:
++
+** Throughput
+** IOPS
+** Latenza
+** Profondità della coda
+** Dimensione media io
+** Capacità
+
+
+. (Facoltativo) è possibile esportare ciascun grafico come file CSV selezionando image:export_button.PNG["pulsante export (esporta)"] icona.
+
+
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

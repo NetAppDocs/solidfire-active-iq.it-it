@@ -1,0 +1,181 @@
+---
+permalink: task-active-iq-all-nodes-view.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, nodes, all, throttling, throttled 
+summary: Scopri di più sulla pagina All Nodes View di SolidFire Active IQ. 
+---
+= Vista tutti i nodi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare informazioni su tutti i nodi di un'azienda, inclusi i nodi con rallentamento, selezionando il nome dell'azienda dall'elenco a discesa *All Nodes View* (Visualizza tutti i nodi). Dopo aver selezionato il nome della società, sostituisce *All Nodes View* (Visualizza tutti i nodi) nella barra di navigazione superiore.
+
+
+NOTE: Se al tuo account SolidFire Active IQ è associato un solo nome società, le pagine *tutti i nodi* e *nodi con rallentamento*, disponibili dal pannello laterale, impostano per impostazione predefinita il nome della società.
+
+Scopri di più sulle pagine tutti i nodi e i nodi con rallentamento:
+
+* <<Visualizza informazioni su tutti i nodi>>
+* <<Visualizza informazioni sui nodi con rallentamento>>
+
+
+
+
+== Visualizza informazioni su tutti i nodi
+
+Nella pagina *tutti i nodi*, disponibile nel pannello laterale, è possibile visualizzare le informazioni relative a tutti i nodi della società selezionata.
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| ID cluster | Numero del cluster assegnato al momento della creazione del cluster. 
+
+
+| Cluster | Nome assegnato al cluster. 
+
+
+| ID nodo | ID generato dal sistema per il nodo. 
+
+
+| Stato  a| 
+Lo stato del nodo:
+
+* Integro: Al nodo non sono associati errori critici.
+* Offline: Impossibile accedere al nodo. Selezionare il collegamento per visualizzare il registro errori.
+* Guasto: Sono presenti errori associati a questo nodo. Selezionare il collegamento per visualizzare il registro errori.
+
+
+
+
+| Nome | Il nome del nodo generato dal sistema. 
+
+
+| Tipo | Mostra il tipo di modello del nodo. 
+
+
+| Numero di serie | Numero di serie univoco assegnato al nodo. 
+
+
+| Versione | Versione del software Element in esecuzione sul nodo. 
+
+
+| IP di gestione | Indirizzo IP di gestione assegnato al nodo per attività di amministrazione della rete da 1 GbE o 10 GbE. 
+
+
+| IP dello storage | Indirizzo IP dello storage assegnato al nodo utilizzato per il rilevamento della rete iSCSI e per tutto il traffico della rete dati. 
+
+
+| Ruolo  a| 
+Identifica il ruolo del nodo nel cluster:
+
+* Cluster Master: Nodo che esegue attività amministrative a livello di cluster e contiene l'indirizzo IP virtuale di gestione e l'indirizzo IP virtuale dello storage.
+* Ensemble Node: Nodo che partecipa al cluster. Esistono tre o cinque nodi di ensemble a seconda delle dimensioni del cluster.
+* Fibre Channel: Un nodo FC nel cluster.
+* Se un nodo non ha un ruolo, il valore viene impostato su - (trattino).
+
+
+|===
+
+
+== Visualizza informazioni sui nodi con rallentamento
+
+Nella pagina *nodi con rallentamento*, disponibile dal pannello laterale, è possibile visualizzare le informazioni relative a tutti i nodi con rallentamento superiore all'1% negli ultimi 30 giorni per la società selezionata.
+
+È possibile visualizzare i nodi con un tempo di limitazione pari a *High*, *Limited* o *Combined* (alto e limitato). È inoltre possibile visualizzare le descrizioni della tabella di limitazione dei nodi e le opzioni di limitazione alta, limitata e combinata selezionando image:description.PNG["descrizione"] come mostrato nell'esempio seguente:
+
+image:throttled_nodes.PNG["Descrizione della pagina nodi con rallentamento e dei tempi di rallentamento"]
+
+Scopri di più sulle informazioni disponibili per i nodi con rallentamento.
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| ID cluster | Numero del cluster assegnato al momento della creazione del cluster. 
+
+
+| Cluster | Nome assegnato al cluster. 
+
+
+| ID nodo | ID generato dal sistema per il nodo. 
+
+
+| Nome | Il nome del nodo generato dal sistema. 
+
+
+| Tipo | Mostra il tipo di modello del nodo. 
+
+
+| Versione | Versione del software Element in esecuzione sul nodo. 
+
+
+ a| 
+*Visualizzazione tempo di rallentamento elevato*
+
+
+
+| Accelerazione massima ultime 24 ore | La percentuale di rallentamento elevato del nodo nelle ultime 24 ore. 
+
+
+| High Throttle ultimi 7 giorni | La percentuale di rallentamento elevato del nodo negli ultimi 7 giorni. 
+
+
+| High Throttle ultimi 14 giorni | La percentuale di rallentamento elevato del nodo negli ultimi 14 giorni. 
+
+
+| High Throttle ultimi 30 giorni | La percentuale di rallentamento elevato del nodo negli ultimi 30 giorni. 
+
+
+ a| 
+*Visualizzazione a tempo limitato*
+
+
+
+| Durata limitata della valvola a farfalla: 24 ore | La percentuale di limitazione limitata del nodo nelle ultime 24 ore. 
+
+
+| Throttle limitato ultimi 7 giorni | La percentuale di limitazione limitata del nodo negli ultimi 7 giorni. 
+
+
+| Durata limitata della valvola a farfalla: 14 giorni | La percentuale di limitazione limitata del nodo negli ultimi 14 giorni. 
+
+
+| Durata limitata della valvola a farfalla: 30 giorni | La percentuale di limitazione limitata del nodo negli ultimi 30 giorni. 
+
+
+ a| 
+*Visualizzazione combinata del tempo di rallentamento*
+
+
+
+| Acceleratore combinato ultimi 24 ore | La percentuale di limitazione combinata del nodo nelle ultime 24 ore. 
+
+
+| Acceleratore combinato ultimi 7 giorni | La percentuale di limitazione combinata dei nodi negli ultimi 7 giorni. 
+
+
+| Acceleratore combinato ultimi 14 giorni | La percentuale di limitazione combinata dei nodi negli ultimi 14 giorni. 
+
+
+| Acceleratore combinato ultimi 30 giorni | La percentuale di limitazione combinata dei nodi negli ultimi 30 giorni. 
+
+
+| Throughput medio ultimi 30 minuti | Somma dei risultati medi eseguiti negli ultimi 30 minuti per tutti i volumi che hanno questo nodo come principale. 
+
+
+| IOPS medi ultimi 30 minuti | Somma del numero medio di IOPS eseguiti negli ultimi 30 minuti rispetto a tutti i volumi che hanno questo nodo come principale. 
+
+
+| Latenza media (µs) ultimi 30 minuti | Il tempo medio in microsecondi, misurato negli ultimi 30 minuti, per completare le operazioni di lettura e scrittura su tutti i volumi che hanno questo nodo come principale. Per riportare questa metrica in base ai volumi attivi, vengono utilizzati solo valori di latenza diversi da zero. 
+|===
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

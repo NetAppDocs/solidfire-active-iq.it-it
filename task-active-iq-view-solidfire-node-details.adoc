@@ -1,0 +1,97 @@
+---
+permalink: task-active-iq-view-solidfire-node-details.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, storage, node, details 
+summary: Scopri di più sulla visualizzazione dei dettagli dei nodi di storage SolidFire in SolidFire Active IQ. 
+---
+= Visualizza i dettagli del nodo di storage SolidFire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ogni nodo è una raccolta di SSD. Ogni nodo storage viene fornito con CPU, rete, cache e risorse di storage. Le risorse del nodo di storage vengono raggruppate in un cluster di nodi.
+
+Nella pagina *nodi*, la barra delle informazioni fornisce una rapida panoramica dei seguenti dati:
+
+* MVIP: Indirizzo IP virtuale di gestione
+* MVIP VLAN ID (ID VLAN MVIP): Virtual LAN ID (ID LAN virtuale) per MVIP
+* SVIP: Indirizzo IP virtuale dello storage
+* ID VLAN SVIP: ID LAN virtuale per SVIP
+
+
+
+
+== Visualizza informazioni sui nodi di storage
+
+Per ciascun nodo di storage del cluster sono disponibili le seguenti informazioni:
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| ID | ID generato dal sistema per il nodo. 
+
+
+| Stato  a| 
+Lo stato del nodo:
+
+* Integro: Al nodo non sono associati errori critici.
+* Offline: Impossibile accedere al nodo. Selezionare il collegamento per visualizzare il registro errori.
+* Guasto: Sono presenti errori associati a questo nodo. Selezionare il collegamento per visualizzare il registro errori.
+
+
+
+
+| Nome | Il nome del nodo generato dal sistema. 
+
+
+| Tipo | Visualizza il tipo di modello del nodo. 
+
+
+| Versione | Versione del software Element in esecuzione su ciascun nodo. 
+
+
+| Codice di matricola | Numero di service tag univoco assegnato al nodo. 
+
+
+| Numero di serie | Numero di serie univoco assegnato al nodo. 
+
+
+| IP di gestione | Indirizzo IP di gestione assegnato al nodo per attività di amministrazione della rete da 1 GbE o 10 GbE. 
+
+
+| IP del cluster | Indirizzo IP del cluster assegnato al nodo utilizzato per la comunicazione tra i nodi dello stesso cluster. 
+
+
+| IP dello storage | Indirizzo IP dello storage assegnato al nodo utilizzato per il rilevamento della rete iSCSI e per tutto il traffico della rete dati. 
+
+
+| Porta di replica | Porta utilizzata sui nodi per la replica remota. 
+
+
+| Ruolo  a| 
+Identifica il ruolo del nodo nel cluster:
+
+* Cluster Master: Nodo che esegue attività amministrative a livello di cluster e contiene MVIP e SVIP.
+* Ensemble Node: Nodo che partecipa al cluster. Esistono tre o cinque nodi di ensemble a seconda delle dimensioni del cluster.
+* Fibre Channel: Un nodo FC nel cluster.
+
+
+
+
+| IOPS medi ultimi 30 minuti | Somma del numero medio di IOPS eseguiti negli ultimi 30 minuti rispetto a tutti i volumi che hanno questo nodo come principale. 
+
+
+| Throughput medio ultimi 30 minuti | Somma dei risultati medi eseguiti negli ultimi 30 minuti per tutti i volumi che hanno questo nodo come principale. 
+
+
+| Latenza media (µs) ultimi 30 minuti | Il tempo medio in microsecondi, misurato negli ultimi 30 minuti, per completare le operazioni di lettura e scrittura su tutti i volumi che hanno questo nodo come principale. Per riportare questa metrica in base ai volumi attivi, vengono utilizzati solo valori di latenza diversi da zero. 
+|===
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

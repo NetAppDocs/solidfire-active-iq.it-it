@@ -1,0 +1,11 @@
+---
+layout: astra 
+sidebar: sidebar 
+permalink: index.html 
+lead: NetApp SolidFire Active IQ is a web-based tool that provides continually updated historical views of cluster-wide statistics. You can set up notifications to alert you about specified events, thresholds, or metrics on a cluster so that they can be addressed quickly when they arise. The Active IQ tool makes monitoring capacity and performance, as well as being informed about cluster health, easy and accessible from anywhere. 
+summary: NetApp SolidFire Active IQ è uno strumento basato sul web che offre viste storiche costantemente aggiornate delle statistiche a livello di cluster. Lo strumento SolidFire Active IQ rende il monitoraggio di capacità e performance semplice e accessibile da qualsiasi luogo. 
+---
+= NetApp SolidFire Active IQ
+:allow-uri-read: 
+
+

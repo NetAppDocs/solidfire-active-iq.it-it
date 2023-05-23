@@ -1,0 +1,60 @@
+---
+permalink: task-active-iq-all-clusters-view-dashboard.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, dashboard, all, clusters, view 
+summary: Scopri di più sulla dashboard di All Clusters View in SolidFire Active IQ. 
+---
+= Dashboard di All Clusters View
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nella pagina *Dashboard* della vista *All Clusters*, è possibile visualizzare i dettagli relativi a performance, capacità e statistiche dei cluster relativi ai cluster associati al proprio account.
+
+[cols="25,75"]
+|===
+| Intestazione | Descrizione 
+
+
+| Azienda | Nome della società assegnato al cluster. 
+
+
+| Cluster | Nome assegnato al cluster. 
+
+
+| ID cluster | Numero del cluster assegnato al momento della creazione del cluster. 
+
+
+| Versione | Versione del cluster master in esecuzione su ciascun nodo. 
+
+
+| Nodi | Numero di nodi nel cluster. 
+
+
+| Volumi | Numero di volumi nel cluster. 
+
+
+| Efficienza | La quantità di efficienza che il sistema sta riscontrando a causa della compressione, della deduplica e del thin provisioning. 
+
+
+| Capacità di blocco utilizzata | Capacità corrente utilizzata del blocco cluster. 
+
+
+| Guasti | Numero di guasti attualmente non risolti rilevati sul cluster. 
+
+
+| SVIP | Indirizzo IP virtuale dello storage assegnato al cluster. 
+
+
+| MVIP | Indirizzo IP virtuale di gestione assegnato al cluster. 
+
+
+| Ultimo aggiornamento | Ora e data dell'aggiornamento più recente del cluster. 
+|===
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

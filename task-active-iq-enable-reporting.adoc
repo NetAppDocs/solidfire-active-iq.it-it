@@ -1,0 +1,115 @@
+---
+permalink: task-active-iq-enable-reporting.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, enable, reporting 
+summary: Scopri come abilitare la funzionalità di reporting SolidFire Active IQ sul nodo di gestione. 
+---
+= Abilitare il reporting SolidFire Active IQ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È necessario attivare la funzionalità di reporting SolidFire Active IQ sul nodo di gestione, se non è già stata eseguita durante l'installazione o l'aggiornamento, prima che il server SolidFire Active IQ possa ricevere i payload dei dati per un cluster dal nodo di gestione. Una volta stabilita la connessione, il cluster invia le informazioni al server SolidFire Active IQ. È quindi possibile visualizzare il cluster nell'interfaccia utente di SolidFire Active IQ, che visualizza le informazioni sul cluster.
+
+
+NOTE: I browser Google Chrome e Firefox sono supportati per l'esecuzione con SolidFire Active IQ.
+
+.Prima di iniziare
+* Alcune funzioni di Active IQ, ad esempio la qualità del servizio (QoS), richiedono l'elemento 11.3 o successivo per funzionare correttamente. Per confermare di disporre della capacità di utilizzare tutte le funzioni di Active IQ, NetApp consiglia quanto segue:
++
+** Il cluster di storage esegue il software NetApp Element 11.3 o versione successiva.
+** È stato implementato un nodo di gestione con versione 11.3 o successiva.
+
+
+* Hai accesso a Internet. Il servizio Active IQ Collector non può essere utilizzato da siti oscuri che non dispongono di connettività esterna.
+
+
+.Fasi
+. Ottenere l'ID risorsa di base per l'installazione:
++
+.. Aprire l'interfaccia utente REST API del servizio di inventario sul nodo di gestione:
++
+[listing]
+----
+https://<ManagementNodeIP>/inventory/1/
+----
+.. Selezionare *autorizzare* e completare le seguenti operazioni:
++
+... Inserire il nome utente e la password del cluster.
+... Immettere l'ID client come `mnode-client`.
+... Selezionare *autorizzare* per avviare una sessione.
+... Chiudere la finestra.
+
+
+.. Dall'interfaccia utente API REST, selezionare *GET ​/Installations*.
+.. Selezionare *Provalo*.
+.. Selezionare *Esegui*.
+.. Dal corpo della risposta del codice 200, copiare il `id` per l'installazione.
++
+[listing, subs="+quotes"]
+----
+{
+  "installations": [
+    {
+      "_links": {
+        "collection": "https://10.111.211.111/inventory/1/installations",
+        "self": "https://10.111.217.111/inventory/1/installations/abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x"
+      },
+      *"id": "abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x",*
+----
++
+
+NOTE: L'installazione dispone di una configurazione delle risorse di base creata durante l'installazione o l'aggiornamento.
+
+
+
+. Attivare la telemetria:
++
+.. Accedere all'interfaccia utente API del servizio mnode sul nodo di gestione immettendo l'indirizzo IP del nodo di gestione seguito da `/mnode`:
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
+.. Selezionare *autorizzare* o qualsiasi icona a forma di lucchetto e completare le seguenti operazioni:
++
+... Inserire il nome utente e la password del cluster.
+... Immettere l'ID client come `mnode-client`.
+... Selezionare *autorizzare* per avviare una sessione.
+... Chiudere la finestra.
+
+
+.. Configurare la risorsa di base:
++
+... Selezionare *PUT /assets/{asset_id}*.
+... Selezionare *Provalo*.
+... Inserire quanto segue nel payload JSON:
++
+[listing]
+----
+{
+"telemetry_active": true
+"config": {}
+}
+----
+... Inserire l'ID di base del passaggio precedente in *asset_ID*.
+... Selezionare *Esegui*.
++
+Il servizio Active IQ viene riavviato automaticamente ogni volta che si modificano le risorse. La modifica delle risorse comporta un breve ritardo prima dell'applicazione delle impostazioni.
+
+
+
+
+
+
+
+. Accedere a. link:https://activeiq.solidfire.com/["SolidFire Active IQ"^] e confermare che è possibile visualizzare i cluster.
+
+
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

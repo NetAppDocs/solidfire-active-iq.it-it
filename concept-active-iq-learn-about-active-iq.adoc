@@ -1,0 +1,52 @@
+---
+permalink: concept-active-iq-learn-about-active-iq.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, learn 
+summary: Scopri di più su SolidFire Active IQ. 
+---
+= Scopri di più su SolidFire Active IQ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di iniziare a utilizzare SolidFire Active IQ, è necessario conoscere il funzionamento di SolidFire Active IQ e le informazioni raccolte.
+
+
+
+== Come funziona SolidFire Active IQ
+
+Servizi come il collector e la telemetria vengono eseguiti su un nodo di gestione. Questi servizi sono configurati con accesso in sola lettura a un cluster ed effettuano chiamate API a un cluster su base pianificata per raccogliere metriche chiave di performance, capacità e stato. Queste informazioni vengono caricate nel database cloud di SolidFire Active IQ utilizzando HTTPS, dove vengono elaborate e rese disponibili all'utente e al supporto NetApp tramite l'interfaccia utente di SolidFire Active IQ. È possibile visualizzare i payload API più recenti e gli intervalli di raccolta ricevuti per un cluster nell'interfaccia utente di SolidFire Active IQ effettuando l'accesso utilizzando le credenziali SSO e selezionando *raccolta API* dal menu a discesa *rapporti*.
+
+link:https://activeiq.solidfire.com/["Access SolidFire Active IQ (accesso richiesto)"^]
+
+
+
+== Informazioni raccolte da SolidFire Active IQ
+
+SolidFire Active IQ raccoglie informazioni su volumi, cluster, nodi, performance e configurazioni:
+
+* ID delle risorse, ad esempio volumi, snapshot e ID del nodo del centro di costo
+* Dati relativi a performance e capacità per cluster e volumi
+* Cronologia degli errori e degli eventi
+* Versioni software NetApp HCI ed Element
+* Configurazioni QoS (Quality of Service)
+* Dettagli del volume, ad esempio dimensioni, data di creazione e così via
+* Configurazione di gruppi di accesso al volume e sessioni
+* Configurazioni di rete di nodi e cluster
+
+
+SolidFire Active IQ non raccoglie le seguenti informazioni sensibili al cliente:
+
+* Dati effettivi dell'utente finale
+* Password
+* Challenge-Handshake Authentication Protocol (CHAP) secrets
+* Informazioni amministrative sull'utente del cluster
+
+
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

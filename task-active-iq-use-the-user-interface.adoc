@@ -1,0 +1,178 @@
+---
+permalink: task-active-iq-use-the-user-interface.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, enable, reporting 
+summary: 'Scopri le funzionalità e le funzionalità dell"interfaccia utente di SolidFire Active IQ.' 
+---
+= Utilizzare l'interfaccia utente di SolidFire Active IQ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Scopri le funzionalità e le funzionalità dell'interfaccia utente in link:https://activeiq.solidfire.com/["SolidFire Active IQ (accesso richiesto)"^]:
+
+* <<Utilizzare i filtri>>
+* <<Elenchi di ordinamento>>
+* <<Visualizzare i grafici e selezionare gli intervalli di date>>
+* <<Esportare le viste a elenco e i dati dei report>>
+* <<Selezionare un cluster>>
+* <<Riferimento icona>>
+* <<Fornire un feedback>>
+
+
+
+
+== Utilizzare i filtri
+
+È possibile ordinare e filtrare le informazioni dell'elenco sulle pagine di SolidFire Active IQ. Quando si visualizzano gli elenchi (ad esempio nodi, dischi, volumi e così via), è possibile utilizzare la funzionalità di filtro per mettere a fuoco le informazioni e adattarle più facilmente allo schermo.
+
+.Fasi
+. Quando si visualizzano le informazioni dell'elenco, selezionare *Filter* (filtro).
+. Scegliere il nome di una colonna da filtrare dal menu a discesa.
+. Selezionare un vincolo per la colonna.
+. Inserire il testo per cui filtrare.
+. Selezionare *Aggiungi filtro*.
++
+Il sistema esegue il nuovo filtro sulle informazioni dell'elenco e memorizza temporaneamente il nuovo filtro. Il filtro selezionato viene visualizzato nella parte inferiore della finestra di dialogo del filtro.
+
+. (Facoltativo) è possibile aggiungere un altro filtro seguendo questa procedura:
++
+.. Selezionare un'altra intestazione di colonna e vincolo.
+.. Selezionare *Aggiungi filtro*.
+
+
+. (Facoltativo) selezionare (*x*) per rimuovere i filtri e visualizzare le informazioni dell'elenco non filtrate.
+
+
+
+NOTE: Alcune tabelle includono l'opzione per escludere le colonne dalla visualizzazione. Per ottenere risultati ottimali, selezionare *colonne* per confermare la visualizzazione di tutte le colonne richieste durante l'impostazione dei filtri.
+
+
+
+== Elenchi di ordinamento
+
+È possibile ordinare le informazioni dell'elenco in base a una o più colonne in determinate pagine all'interno dell'interfaccia utente di SolidFire Active IQ. In questo modo è possibile disporre le informazioni necessarie sullo schermo.
+
+.Fasi
+. Per ordinare una singola colonna, selezionare l'intestazione della colonna fino a quando le informazioni non vengono ordinate nell'ordine desiderato.
+. Per ordinare più colonne, attenersi alla seguente procedura:
++
+.. Selezionare l'intestazione della colonna della prima colonna che si desidera ordinare fino a quando le informazioni non vengono ordinate nell'ordine desiderato.
+.. Per aggiungere una colonna, tenere premuto il tasto comando e selezionare l'intestazione della colonna fino a quando le informazioni non vengono ordinate nell'ordine desiderato. È possibile aggiungere più colonne.
+
+
++
+Questa funzionalità non è disponibile in tutte le pagine.
+
+
+
+
+
+== Visualizzare i grafici e selezionare gli intervalli di date
+
+I grafici e gli intervalli di date di SolidFire Active IQ sono perfettamente integrati tra loro. Quando si seleziona un intervallo di date, tutti i grafici della pagina vengono regolati in base all'intervallo selezionato. L'intervallo di date predefinito visualizzato per ciascun grafico è di sette giorni.
+
+È possibile selezionare un intervallo di date dalla casella a discesa del calendario o da una serie di intervalli predefiniti. Gli intervalli di date vengono calcolati utilizzando l'ora corrente del browser (al momento della selezione) e il periodo di tempo configurato. Inoltre, è possibile selezionare un intervallo desiderato sfiorando direttamente il grafico a barre nella parte inferiore. Se disponibile, passare da un grafico all'altro selezionando i layout delle miniature a sinistra. Questi layout possono anche essere nascosti.
+
+Posizionare il puntatore del mouse su una linea del grafico per visualizzare i dettagli point-in-time.
+
+.Espandere l'esempio di grafico
+[%collapsible]
+====
+image:graphs_and_date_ranges.PNG["Grafici e intervalli di date"]
+
+====
+
+
+== Esportare le viste a elenco e i dati dei report
+
+È possibile esportare un'intera vista a elenco o i dati del grafico in un formato CSV (comma-Separated Values). Per alcuni elenchi, ad esempio cluster o nodi, è possibile selezionare le colonne da esportare; per impostazione predefinita, le colonne visualizzate sono selezionate. Se esiste un determinato ordinamento o se viene utilizzato un filtro per limitare le voci visualizzate, tale ordinamento e filtro vengono conservati nel file esportato.
+
+.Fasi
+. In una vista elenco o in un grafico, selezionare image:export_button.PNG["Pulsante Export (Esporta)"] icona.
+
+
+
+
+== Selezionare un cluster
+
+In SolidFire Active IQ, è possibile visualizzare le informazioni relative a un singolo cluster dell'ambiente.
+
+.Fasi
+. Dalla dashboard di SolidFire Active IQ, selezionare *selezionare un cluster*.
+. Il menu a discesa elenca i cluster disponibili.
+. Utilizzare il campo di ricerca per individuare il cluster desiderato o i cluster visualizzati di recente.
+. Selezionare il nome del cluster.
+
+
+
+
+== Riferimento icona
+
+Durante la visualizzazione dell'interfaccia utente di SolidFire Active IQ, potrebbero essere visualizzate le seguenti icone.
+
+[cols="25,75"]
+|===
+| Icona | Descrizione 
+
+
+ a| 
+image:refresh.PNG["Icona di refresh"]
+| Aggiornare 
+
+
+ a| 
+image:filter.PNG["Icona del filtro"]
+| Filtro 
+
+
+ a| 
+image:export_button.PNG["Pulsante Export (Esporta)"]
+| Esportare 
+
+
+ a| 
+image:menu.PNG["Icona del menu"]
+| Menu per le impostazioni dell'account, la documentazione, il feedback, il supporto e la disconnessione. 
+
+
+ a| 
+image:copy.PNG["Icona Copia negli Appunti"]
+| Selezionare una volta per copiare negli Appunti. 
+
+
+ a| 
+image:wrap_toggle.PNG["Attiva/disattiva wrap text"]
+image:unwrap_toggle.PNG["Attiva/disattiva wrap text"]
+| Attivare e disattivare il pulsante per concludere e chiudere il testo. 
+
+
+ a| 
+image:more_information.PNG["Icona ulteriori informazioni"]
+| Ulteriori informazioni. Selezionare per altre opzioni. 
+
+
+ a| 
+image:more_details.PNG["Ulteriori dettagli"]
+| Selezionare per ulteriori dettagli.image:description.PNG["Descrizione"] 
+|===
+
+
+== Fornire un feedback
+
+È possibile migliorare l'interfaccia utente di SolidFire Active IQ e risolvere eventuali problemi dell'interfaccia utente utilizzando l'opzione di feedback e-mail accessibile dall'interfaccia utente.
+
+.Fasi
+. Da qualsiasi pagina dell'interfaccia utente, selezionare image:menu.PNG["Icona del menu"] E selezionare *Feedback*.
+. Inserire le informazioni pertinenti nel corpo del messaggio.
+. Allegare eventuali screenshot utili.
+. Selezionare *Invia*.
+
+
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]
