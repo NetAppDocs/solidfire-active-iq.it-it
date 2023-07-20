@@ -391,7 +391,6 @@
   <block id="cb0b3ac9b7a179d7ab7a6fca23f53ad7" category="cell">Il numero di snapshot associati.</block>
   <block id="8aa8c731cfe2c1c5fc7e8d8161be302a" category="cell">512e attivato</block>
   <block id="4b70e4e226aa2663d010aeae818edca9" category="cell">Identifica se 512e è attivato su un volume.</block>
-  <block id="49040853732d48deb2df7eebcd95b127" category="cell">Identifica se il volume viene rallentato a causa di un carico elevato sul nodo di storage primario.</block>
   <block id="fe6f6567eb042d45b55b29aa9a29df5b" category="cell">Volumi accoppiati</block>
   <block id="3864a6411a8582c09e9f190a2d97c876" category="cell">Indica se un volume è stato associato o meno.</block>
   <block id="bb1bce6ceb9138a27ff4a45ffa2b6cc4" category="cell">L'ora in cui è stata completata l'attività di creazione del volume.</block>
@@ -1112,4 +1111,5 @@
   <block id="08edd2123939d5309dced149763a50ee" category="sidebar">NetApp HCI</block>
   <block id="d60c463bb4096f3ed4bd1618626dfe10" category="sidebar">Risolvere i problemi</block>
   <block id="0607bd332350ef193bc31ef1c742c508" category="sidebar">Contattare il supporto tecnico</block>
+  <block id="f1fa7b7cc46f8f0571dab3e8216c76eb" category="cell">Rappresenta la limitazione corrente del volume. Il valore non include la limitazione storica sul volume.</block>
 </blocks>

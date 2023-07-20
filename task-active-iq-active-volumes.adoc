@@ -160,7 +160,7 @@ Mostra quanto è pieno il volume:
 | 512e attivato | Identifica se 512e è attivato su un volume. 
 
 
-| Accelerazione QoS | Identifica se il volume viene rallentato a causa di un carico elevato sul nodo di storage primario. 
+| Accelerazione QoS | Rappresenta la limitazione corrente del volume. Il valore non include la limitazione storica sul volume. 
 
 
 | ID nodo primario | Nodo primario per questo volume. 
