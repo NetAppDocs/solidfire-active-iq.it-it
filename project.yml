@@ -69,6 +69,8 @@ sidebar:
         url: "/task-active-iq-recommendations.html"
       - title: Rallentamento del nodo
         url: "/task-active-iq-throttling.html"
+      - title: Volumi più impegnativi
+        url: "/task-active-iq-busiest-volumes.html"
     - title: Macchine virtuali
       url: "/task-active-iq-virtual-machines.html"
     - title: Allarmi VMware

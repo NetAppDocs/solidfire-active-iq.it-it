@@ -11,12 +11,13 @@ summary: Scopri di più sulla pagina di gestione del QoS in SolidFire Active IQ.
 
 
 [role="lead"]
-Dalla pagina *QoS Management* (Gestione QoS), disponibile sul pannello laterale di un cluster selezionato, è possibile visualizzare le informazioni sui consigli QoS e sulla limitazione per i nodi di un cluster.
+Dalla pagina *QoS Management* (Gestione QoS), disponibile sul pannello laterale di un cluster selezionato, è possibile visualizzare informazioni sui consigli QoS, sulla limitazione e sui volumi per i nodi di un cluster.
 
-Scopri di più sulla visualizzazione delle informazioni sui consigli QoS e sulla limitazione per un nodo selezionato:
+Scopri di più sulla visualizzazione di informazioni sui consigli QoS, sulla limitazione e sui volumi per un nodo selezionato:
 
 * link:task-active-iq-recommendations.html["Raccomandazioni"]
 * link:task-active-iq-throttling.html["Rallentamento del nodo"]
+* link:task-active-iq-busiest-volumes.html["Volumi più impegnativi"]
 
 
 

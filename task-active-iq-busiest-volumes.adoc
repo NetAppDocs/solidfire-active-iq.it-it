@@ -1,0 +1,52 @@
+---
+permalink: task-active-iq-busiest-volumes.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, volumes, busiest 
+summary: Scopri di più sulla pagina dei volumi più impegnativi di SolidFire Active IQ. 
+---
+= Volumi più impegnativi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dalla pagina *QoS Management* > *bussiest Volumes*, disponibile dal pannello laterale per un cluster selezionato, è possibile visualizzare i dieci volumi con il throughput più elevato per un nodo e un intervallo di tempo selezionati nel cluster.
+
+Scopri di più sulla visualizzazione delle informazioni sui volumi più trafficata:
+
+* <<Visualizzare i grafici e selezionare gli intervalli di date>>
+* <<Esportare i dati del nodo più trafficato>>
+
+
+
+
+== Visualizzare i grafici e selezionare gli intervalli di date
+
+Dopo aver selezionato il nodo dall'elenco a discesa, vengono visualizzati i dieci volumi con il throughput più elevato su tale nodo. Per ciascun volume, è possibile visualizzare i grafici *throughput*, *Average io Size*, *IOPS* e *Latency*; per visualizzare l'ultimo grafico, potrebbe essere necessario scorrere la pagina. Per passare da un volume all'altro, selezionare i layout delle miniature a sinistra. Quando si seleziona un nodo diverso, questi grafici vengono modificati nel nodo appena selezionato.
+
+I grafici e gli intervalli di date di SolidFire Active IQ sono perfettamente integrati tra loro. Quando si seleziona un intervallo di date, i grafici di tale pagina si adattano all'intervallo selezionato. L'intervallo di date predefinito visualizzato per ciascun grafico è di sette giorni. È possibile selezionare un intervallo di date dalla casella a discesa del calendario o da una serie di intervalli predefiniti. È inoltre possibile selezionare un intervallo desiderato passando direttamente sopra il grafico a barre in basso. Gli intervalli di date vengono calcolati utilizzando l'ora corrente del browser (al momento della selezione) e il periodo di tempo configurato. Quando si modifica l'intervallo di date selezionato per un nodo, potrebbero cambiare anche i dieci volumi più in attività visualizzati.
+
+.Espandere l'esempio di grafico
+[%collapsible]
+====
+image:busiest_volumes.PNG["Display grafico per volumi più impegnativi"]
+
+====
+Posizionare il puntatore del mouse in qualsiasi punto del grafico per visualizzare i dettagli point-in-time delle operazioni di lettura, scrittura e totale. Se un volume non è presente sul nodo per una parte dell'intervallo di tempo selezionato, viene rappresentato da una linea tratteggiata
+
+
+
+== Esportare i dati del nodo più trafficato
+
+È possibile esportare i dati del grafico in un formato CSV (comma-Separated Values). Vengono esportate solo le informazioni visualizzate nel grafico.
+
+.Fasi
+. In una vista elenco o in un grafico, selezionare image:export_button.PNG["Pulsante Export (Esporta)"] icona.
+
+
+
+
+== Trova ulteriori informazioni
+
+https://www.netapp.com/support-and-training/documentation/["Documentazione sui prodotti NetApp"^]

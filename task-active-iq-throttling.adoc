@@ -25,7 +25,7 @@ Scopri di più sulla visualizzazione delle informazioni sulla limitazione dei no
 
 I grafici e gli intervalli di date di SolidFire Active IQ sono perfettamente integrati tra loro. Quando si seleziona un intervallo di date, i grafici *Node Throttling* (rallentamento nodo) e *Total Volume throughput* (throughput volume totale) in quella pagina si adattano all'intervallo selezionato. L'intervallo di date predefinito visualizzato per ciascun grafico è di sette giorni. Quando si seleziona un nodo dalle schede di selezione del grafico, questi grafici vengono modificati nel nodo appena selezionato.
 
-È possibile selezionare un intervallo di date dalla casella a discesa del calendario o da una serie di intervalli predefiniti. Gli intervalli di date vengono calcolati utilizzando l'ora corrente del browser (al momento della selezione) e il periodo di tempo configurato. Inoltre, è possibile selezionare un intervallo desiderato sfiorando direttamente il grafico a barre nella parte inferiore. È possibile passare da un grafico all'altro selezionando i layout delle miniature a sinistra.
+È possibile selezionare un intervallo di date dalla casella a discesa del calendario o da una serie di intervalli predefiniti. Gli intervalli di date vengono calcolati utilizzando l'ora corrente del browser (al momento della selezione) e il periodo di tempo configurato. È inoltre possibile selezionare un intervallo desiderato passando direttamente sopra il grafico a barre in basso. Per passare da un grafico all'altro, selezionare i layout delle miniature a sinistra.
 
 Il grafico *Node Throttling* mostra la limitazione del nodo nel periodo di tempo selezionato in base alle impostazioni IOPS minime e massime per i volumi ospitati sul nodo selezionato. Il colore rappresenta la quantità di rallentamento:
 
@@ -39,7 +39,7 @@ Il grafico *Total Volume throughput* visualizza la somma del throughput per i vo
 .Espandere l'esempio di grafico
 [%collapsible]
 ====
-image:node_throttling_range.PNG["Grafico di limitazione del nodo"]
+image:node_throttling_range.PNG["Visualizzazione grafica per la limitazione del nodo"]
 
 ====
 Posizionare il puntatore del mouse in qualsiasi punto del grafico per visualizzare i dettagli relativi al punto nel tempo.
