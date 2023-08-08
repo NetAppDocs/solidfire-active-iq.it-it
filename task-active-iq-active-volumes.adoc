@@ -55,12 +55,14 @@ Capacità corrente utilizzata del volume:
 
 
 | Accelerazione QoS  a| 
-Identifica se il volume viene rallentato a causa di un carico elevato sul nodo di storage primario:
+Rappresenta la limitazione corrente del volume.
 
 * Verde = fino al 20%
 * Giallo = superiore al 20%
 * Rosso = superiore al 80%
 
+
+Il valore non include la limitazione storica sul volume.
 
 
 
@@ -112,12 +114,7 @@ Una volta aperta la pagina per il volume attivo, è possibile visualizzare i dat
 
 
 | Capacità utilizzata  a| 
-Mostra quanto è pieno il volume:
-
-* Verde = fino al 80%
-* Giallo = superiore al 80%
-* Rosso = superiore al 95%.
-
+Indica il livello di riempimento del volume.
 
 
 
