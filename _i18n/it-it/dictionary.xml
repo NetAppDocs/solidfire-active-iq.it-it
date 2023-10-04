@@ -917,7 +917,6 @@
   <block id="12d637dd473b00b6a6e6b955fb51288a" category="cell">Nome del cliente associato all'avviso.</block>
   <block id="395a2827aacec94ff2183ea6ed2523ab" category="cell">Visualizza il nome del cluster per cui è stato aggiunto il criterio di avviso.</block>
   <block id="4d1c0d628f7187afcd0dbf03553e9365" category="section-title">Visualizzare le policy di avviso</block>
-  <block id="36056ade5aa16b4101c0f4cf7927c138" category="paragraph">La pagina *Policies* del menu a discesa *Alerts* in *All Clusters View* mostra le seguenti informazioni relative ai criteri per tutti i cluster.</block>
   <block id="002f7378a5fcfc2f66cfea851a7fd5f4" category="cell">Nome policy</block>
   <block id="ae1d52073742c822d33f127442660e95" category="cell">Nome del criterio di avviso definito dall'utente.</block>
   <block id="370ed24b10bc15a8ba6506396950587d" category="cell">Indirizzo e-mail definito nella policy di avviso.</block>
@@ -999,9 +998,7 @@
   <block id="ad5a54b96d86e967dc2a014c681f9377" category="list-text">Confermare l'azione.</block>
   <block id="e5574d4f50cf65adfb39e54e1a5f5ab1" category="paragraph">Il criterio viene rimosso in modo permanente dal sistema.</block>
   <block id="685a82571a4b315892d300d3410d13b9" category="section-title">Visualizzare i cluster sospesi</block>
-  <block id="a5358ca3015b1305c6ef8a4f2ae99f44" category="paragraph">Nella pagina *Clusters soppressi* del menu a discesa *Alerts* della vista *All Clusters*, è possibile visualizzare un elenco di cluster con notifiche di avviso soppresse.</block>
   <block id="0e3b63363a35e9f7a5dee72963106a92" category="paragraph">Il supporto NetApp o i clienti possono eliminare le notifiche di avviso per un cluster durante l'esecuzione della manutenzione. Quando le notifiche vengono soppresse per un cluster che utilizza la soppressione dell'aggiornamento, gli avvisi comuni che si verificano durante gli aggiornamenti non vengono inviati. È inoltre disponibile un'opzione di eliminazione completa degli avvisi che interrompe la notifica degli avvisi per un cluster per un periodo di tempo specificato. È possibile visualizzare gli avvisi e-mail che non vengono inviati quando le notifiche vengono soppresse nella pagina *Cronologia* del menu *Avvisi*. Le notifiche soppresse vengono riattivate automaticamente allo scadere della durata definita. È possibile terminare la soppressione delle notifiche in anticipo selezionando "Riprendi notifiche" nel menu a discesa.</block>
-  <block id="4a6a16c3e094da903bd21906ee24fcd6" category="paragraph">Le seguenti informazioni sono disponibili nella pagina *Clusters soppressi*.</block>
   <block id="d6ed36bb2b00046e0edf3d24b526b7ad" category="cell">Nome cluster</block>
   <block id="2bbc845892f400626baab5af687527c5" category="cell">Ora di inizio</block>
   <block id="1b1b4ed1e5c3651d0098e519d90608f1" category="cell">L'ora esatta in cui è stata avviata o pianificata l'eliminazione delle notifiche.</block>
@@ -1010,7 +1007,6 @@
   <block id="57347427d54a8b3062a13502efbb0b39" category="paragraph">Indica lo stato di una notifica di avviso:</block>
   <block id="4e5f06cf705243a2cf7308548afc1545" category="list-text">*Attivo*: La soppressione delle notifiche di avviso è attiva.</block>
   <block id="50530d3f54881ad7130c640aaca2dbae" category="list-text">*Futuro*: La soppressione delle notifiche di avviso è pianificata per una data e un'ora future.</block>
-  <block id="2928a5c9dcc57c93a61ff231dce7d08e" category="cell">Selezionare l'opzione per sospendere o riprendere le notifiche per un cluster.</block>
   <block id="91b4bb4cfabe9824c1024d2207177139" category="section-title">Elimina le notifiche del cluster</block>
   <block id="57829e1c527aadb9862b10c223954f81" category="paragraph">È possibile eliminare le notifiche di avviso a livello di cluster per un singolo cluster o più cluster per la data e l'ora correnti o la pianificazione per iniziare a una data e ora future.</block>
   <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">Effettuare una delle seguenti operazioni:</block>
@@ -1124,4 +1120,17 @@
   <block id="86d684bea1d4ec8e7ab5dd525434db07" category="paragraph">Rappresenta la limitazione corrente del volume.</block>
   <block id="8affec94c4ca90859e2feacff861a492" category="paragraph">Il valore non include la limitazione storica sul volume.</block>
   <block id="b58d6152d74cfc9445a90c470e4070bc" category="paragraph">Indica il livello di riempimento del volume.</block>
+  <block id="32082878b3285421b4e15f332218aaf4" category="paragraph">La pagina *Policies* nel menu a discesa Avvisi all'interno della vista tutti i cluster mostra le seguenti informazioni sui criteri per tutti i cluster.</block>
+  <block id="3f35e5d4a65d2fabe1b0df43b7f95473" category="paragraph">Nella pagina *Suppressed Clusters* del menu a discesa Avvisi all'interno della vista tutti i cluster, è possibile visualizzare un elenco di cluster che hanno le notifiche di avviso soppresse.</block>
+  <block id="b0375fa371accb0190cfd4697a3d3a72" category="paragraph">Nella pagina *Suppressed Clusters*, è possibile visualizzare le seguenti informazioni per le soppressioni *Past*, *Active* e *Future*. L'opzione *passato* mostra le soppressioni terminate negli ultimi 90 giorni.</block>
+  <block id="7b1255f8fdd0cb8751baee55621164e1" category="cell">Creato da</block>
+  <block id="85c70e46956e908554028a7cfb3c9bb3" category="cell">Il nome utente dell'account che ha creato l'eliminazione.</block>
+  <block id="171f0707519d57cefcbb271e1ecffd3c" category="cell">Ora di creazione</block>
+  <block id="37e9a8f9aba121bfbca96f517e2c6767" category="cell">L'ora esatta in cui è stata creata la soppressione.</block>
+  <block id="c94ff6ebc86390bffc57ed46a873a939" category="cell">Ora aggiornata</block>
+  <block id="20e8cffa15ad2f6d665e2a2a6fd9cfd9" category="cell">Se la soppressione è stata modificata dopo la sua creazione, si tratta dell'ora esatta in cui è stata modificata l'ultima soppressione.</block>
+  <block id="2b7dabba0077abe3732e0418b048a56b" category="cell">Pianificato</block>
+  <block id="65041f578bcadcc7ac79c02dc07efcf6" category="paragraph">Indica se la soppressione è stata programmata al momento della creazione:</block>
+  <block id="9f161b7d0108b4a5362af45388ad5756" category="list-text">*True*: I valori di ora di creazione e ora di inizio sono gli stessi.</block>
+  <block id="7167ed746d9c6278dbbbb2634f319107" category="list-text">*False*: I valori di ora di creazione e ora di inizio sono diversi.</block>
 </blocks>

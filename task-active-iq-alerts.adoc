@@ -89,7 +89,7 @@ L'elenco seguente descrive i dettagli disponibili:
 
 == Visualizzare le policy di avviso
 
-La pagina *Policies* del menu a discesa *Alerts* in *All Clusters View* mostra le seguenti informazioni relative ai criteri per tutti i cluster.
+La pagina *Policies* nel menu a discesa Avvisi all'interno della vista tutti i cluster mostra le seguenti informazioni sui criteri per tutti i cluster.
 
 L'elenco seguente descrive i dettagli disponibili:
 
@@ -277,11 +277,11 @@ Il criterio viene rimosso in modo permanente dal sistema.
 
 == Visualizzare i cluster sospesi
 
-Nella pagina *Clusters soppressi* del menu a discesa *Alerts* della vista *All Clusters*, è possibile visualizzare un elenco di cluster con notifiche di avviso soppresse.
+Nella pagina *Suppressed Clusters* del menu a discesa Avvisi all'interno della vista tutti i cluster, è possibile visualizzare un elenco di cluster che hanno le notifiche di avviso soppresse.
 
 Il supporto NetApp o i clienti possono eliminare le notifiche di avviso per un cluster durante l'esecuzione della manutenzione. Quando le notifiche vengono soppresse per un cluster che utilizza la soppressione dell'aggiornamento, gli avvisi comuni che si verificano durante gli aggiornamenti non vengono inviati. È inoltre disponibile un'opzione di eliminazione completa degli avvisi che interrompe la notifica degli avvisi per un cluster per un periodo di tempo specificato. È possibile visualizzare gli avvisi e-mail che non vengono inviati quando le notifiche vengono soppresse nella pagina *Cronologia* del menu *Avvisi*. Le notifiche soppresse vengono riattivate automaticamente allo scadere della durata definita. È possibile terminare la soppressione delle notifiche in anticipo selezionando "Riprendi notifiche" nel menu a discesa.
 
-Le seguenti informazioni sono disponibili nella pagina *Clusters soppressi*.
+Nella pagina *Suppressed Clusters*, è possibile visualizzare le seguenti informazioni per le soppressioni *Past*, *Active* e *Future*. L'opzione *passato* mostra le soppressioni terminate negli ultimi 90 giorni.
 
 [cols="25,75"]
 |===
@@ -295,6 +295,15 @@ Le seguenti informazioni sono disponibili nella pagina *Clusters soppressi*.
 
 
 | Nome cluster | Nome assegnato al cluster. 
+
+
+| Creato da | Il nome utente dell'account che ha creato l'eliminazione. 
+
+
+| Ora di creazione | L'ora esatta in cui è stata creata la soppressione. 
+
+
+| Ora aggiornata | Se la soppressione è stata modificata dopo la sua creazione, si tratta dell'ora esatta in cui è stata modificata l'ultima soppressione. 
 
 
 | Ora di inizio | L'ora esatta in cui è stata avviata o pianificata l'eliminazione delle notifiche. 
@@ -326,7 +335,13 @@ Indica lo stato di una notifica di avviso:
 
 
 
-| Azioni | Selezionare l'opzione per sospendere o riprendere le notifiche per un cluster. 
+| Pianificato  a| 
+Indica se la soppressione è stata programmata al momento della creazione:
+
+* *True*: I valori di ora di creazione e ora di inizio sono gli stessi.
+* *False*: I valori di ora di creazione e ora di inizio sono diversi.
+
+
 |===
 
 
